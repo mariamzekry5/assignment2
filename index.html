@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariam Amr Zekry | CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Loaded in the head (not deferred) so the saved theme applies before the page paints -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Welcome message (Option 5) is inserted here by script.js -->
+    <div id="welcome-banner" class="welcome-banner" role="status" hidden></div>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <a href="#top" class="brand">Mariam Zekry</a>
+
+        <ul class="nav-links">
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Dark / light mode toggle (Option 3) -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-label">Dark</span>
+        </button>
+    </nav>
+
+    <!-- Header / hero -->
+    <header id="top" class="hero">
+        <div class="hero-inner">
+            <img src="images/profile.jpg" alt="Photo of Mariam Amr Zekry" class="profile-picture">
+
+            <div class="hero-text">
+                <h1>Mariam Amr Zekry</h1>
+                <p class="hero-title">Business Student | MICT, The American University in Cairo</p>
+                <p class="hero-meta">Expected Graduation: Fall 2027</p>
+
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-light">Contact Me</a>
+                    <a href="https://www.linkedin.com/in/mariam-zekry/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- White card behind the logo so the navy logo stays readable on the teal header -->
+            <div class="logo-card">
+                <img src="images/auc-logo.png" alt="The American University in Cairo, School of Business logo" class="auc-logo">
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Profile -->
+        <section id="profile" class="card">
+            <div class="section-header">
+                <h2>Profile</h2>
+            </div>
+            <p>
+                Business student at The American University in Cairo pursuing a degree in
+                Management of Information and Communication Technology (MICT), with an
+                expected graduation date of Fall 2027. Interested in business, technology,
+                data analysis, problem-solving, and project development.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="card">
+            <div class="section-header">
+                <h2>Education</h2>
+            </div>
+
+            <div class="entry">
+                <div class="entry-head">
+                    <h3>The American University in Cairo (AUC)</h3>
+                    <span class="entry-date">Expected Fall 2027</span>
+                </div>
+                <p class="entry-sub">Bachelor's Degree in Management of Information and Communication Technology (MICT)</p>
+            </div>
+        </section>
+
+        <!-- Skills (collapsible, Option 2) -->
+        <section id="skills" class="card">
+            <div class="section-header">
+                <h2>Skills</h2>
+                <button class="toggle-btn" type="button" data-target="skills-content" aria-expanded="true" aria-controls="skills-content">
+                    Hide Skills
+                </button>
+            </div>
+
+            <div id="skills-content" class="collapsible">
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <h3>Business &amp; Management</h3>
+                        <ul class="chips">
+                            <li>Business Strategy</li>
+                            <li>Project Management</li>
+                            <li>Event &amp; Competition Planning</li>
+                            <li>Inventory Management</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Technical &amp; Data</h3>
+                        <ul class="chips">
+                            <li>Data Analysis</li>
+                            <li>R</li>
+                            <li>SQL / Databases</li>
+                            <li>OutSystems</li>
+                            <li>Shopify &amp; E-commerce</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Personal</h3>
+                        <ul class="chips">
+                            <li>Problem Solving</li>
+                            <li>Critical Thinking</li>
+                            <li>Teamwork &amp; Cross-functional Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience (collapsible, Option 2) -->
+        <section id="experience" class="card">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <button class="toggle-btn" type="button" data-target="experience-content" aria-expanded="true" aria-controls="experience-content">
+                    Hide Experience
+                </button>
+            </div>
+
+            <div id="experience-content" class="collapsible">
+                <article class="entry">
+                    <div class="entry-head">
+                        <h3>Interdisciplinary Student Competitions &amp; Development Activities</h3>
+                        <span class="entry-date">Organizer</span>
+                    </div>
+                    <ul class="bullets">
+                        <li>Organized and planned interdisciplinary student competitions and development activities.</li>
+                        <li>Designed activities to encourage teamwork, problem-solving, innovation, and practical learning.</li>
+                    </ul>
+                    <ul class="tags">
+                        <li>Event Planning</li>
+                        <li>Project Management</li>
+                        <li>Teamwork</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <!-- Projects (collapsible, Option 2) -->
+        <section id="projects" class="card">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <button class="toggle-btn" type="button" data-target="projects-content" aria-expanded="true" aria-controls="projects-content">
+                    Hide Projects
+                </button>
+            </div>
+
+            <div id="projects-content" class="collapsible">
+                <div class="project-grid">
+
+                    <article class="project">
+                        <h3>Accounting Project with Banque Misr</h3>
+                        <ul class="bullets">
+                            <li>Developed competition concepts as part of an accounting project with Banque Misr.</li>
+                            <li>Involved companies such as Cairoscene and real-estate developers.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Business Strategy</li>
+                            <li>Competition Design</li>
+                        </ul>
+                    </article>
+
+                    <article class="project">
+                        <h3>Production Tracking Application</h3>
+                        <ul class="bullets">
+                            <li>Developed an OutSystems-based application concept for tracking production across different stages.</li>
+                            <li>Focused on identifying bottlenecks in the production process.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>OutSystems</li>
+                            <li>Process Analysis</li>
+                        </ul>
+                    </article>
+
+                    <article class="project">
+                        <h3>Retail Inventory Analysis</h3>
+                        <ul class="bullets">
+                            <li>Used R to analyze retail inventory and sales data.</li>
+                            <li>Developed store-to-store inventory transfer recommendations.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>R</li>
+                            <li>Data Analysis</li>
+                        </ul>
+                    </article>
+
+                    <article class="project">
+                        <h3>E-commerce &amp; Inventory Management</h3>
+                        <ul class="bullets">
+                            <li>Worked with Shopify and inventory data to explore stock management and sales tracking.</li>
+                            <li>Explored promotions and multi-outlet inventory operations.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Shopify</li>
+                            <li>Inventory Management</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact: details + form with validation (Option 1) -->
+        <section id="contact" class="card">
+            <div class="section-header">
+                <h2>Contact</h2>
+            </div>
+
+            <div class="contact-layout">
+                <ul class="contact-info">
+                    <li>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:mariamzekry@aucegypt.edu">mariamzekry@aucegypt.edu</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Phone</span>
+                        <span>0120699659</span>
+                    </li>
+                    <li>
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/mariam-zekry/" target="_blank" rel="noopener">linkedin.com/in/mariam-zekry</a>
+                    </li>
+                </ul>
+
+                <!-- novalidate turns off the browser's built-in popups so script.js handles validation -->
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name">
+                        <p class="field-error" id="name-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email">
+                        <p class="field-error" id="email-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                        <p class="field-error" id="message-error" aria-live="polite"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+
+                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Mariam Amr Zekry</p>
+    </footer>
+
+</body>
+
+</html>
