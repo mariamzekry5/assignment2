@@ -1,10 +1,13 @@
 /* =========================================================
-   Interactive CV - script.js
-   Features:
+   Portfolio - script.js
+   Shared by every page. Features from Assignment 2:
      Option 1 - Contact form with validation
      Option 2 - Show / hide sections
      Option 3 - Dark / light mode toggle
      Option 5 - Welcome message on page load
+   Added in Assignment 3:
+     Mobile navigation menu for the multi-page layout
+   (The API features are in api.js.)
    ========================================================= */
 
 
@@ -55,10 +58,47 @@ document.documentElement.setAttribute("data-theme", getInitialTheme());
 
 document.addEventListener("DOMContentLoaded", function () {
     setupThemeToggle();
+    setupNavMenu();
     setupSectionToggles();
-    setupContactForm();
-    showWelcomeMessage();
+
+    // These elements only exist on some pages
+    if (document.getElementById("contact-form")) {
+        setupContactForm();
+    }
+    if (document.getElementById("welcome-banner")) {
+        showWelcomeMessage();
+    }
 });
+
+
+/* ---------------------------------------------------------
+   Mobile navigation menu
+   On small screens the links are hidden behind a menu
+   button; clicking it opens and closes the list.
+   --------------------------------------------------------- */
+
+function setupNavMenu() {
+    const button = document.getElementById("menu-toggle");
+    const links = document.getElementById("nav-links");
+
+    function setOpen(open) {
+        links.classList.toggle("open", open);
+        button.setAttribute("aria-expanded", String(open));
+        button.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+
+    button.addEventListener("click", function () {
+        setOpen(!links.classList.contains("open"));
+    });
+
+    // Close the menu with the Escape key
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && links.classList.contains("open")) {
+            setOpen(false);
+            button.focus();
+        }
+    });
+}
 
 
 /* ---------------------------------------------------------
@@ -265,7 +305,7 @@ function showWelcomeMessage() {
     }
 
     const text = document.createElement("span");
-    text.textContent = greeting + "! Welcome to my portfolio page 👋";
+    text.textContent = greeting + "! Welcome to my portfolio 👋";
 
     const closeButton = document.createElement("button");
     closeButton.type = "button";

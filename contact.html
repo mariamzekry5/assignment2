@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mariam Amr Zekry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Loaded in the head (not deferred) so the saved theme applies before the page paints -->
+    <script src="script.js"></script>
+    <!-- API widgets (weather, quotes, news) -->
+    <script src="api.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar (shared by every page) -->
+    <nav class="navbar" aria-label="Main">
+        <a href="index.html" class="brand">Mariam Zekry</a>
+
+        <!-- Menu button, only visible on small screens -->
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
+        </button>
+
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+
+        <!-- Dark / light mode toggle (Option 3) -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-label">Dark</span>
+        </button>
+    </nav>
+
+    <!-- Page banner -->
+    <header class="page-hero">
+        <div class="page-hero-inner">
+            <h1>Contact</h1>
+            <p>Have a question or an opportunity? I would love to hear from you.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Contact: details + form with validation (Option 1) -->
+        <section id="contact" class="card">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+            </div>
+
+            <div class="contact-layout">
+                <ul class="contact-info">
+                    <li>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:mariamzekry@aucegypt.edu">mariamzekry@aucegypt.edu</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">Phone</span>
+                        <span>0120699659</span>
+                    </li>
+                    <li>
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://www.linkedin.com/in/mariam-zekry/" target="_blank" rel="noopener">linkedin.com/in/mariam-zekry</a>
+                    </li>
+                </ul>
+
+                <!-- novalidate turns off the browser's built-in popups so script.js handles validation -->
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name">
+                        <p class="field-error" id="name-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email">
+                        <p class="field-error" id="email-error" aria-live="polite"></p>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                        <p class="field-error" id="message-error" aria-live="polite"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+
+                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <nav class="footer-links" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="news.html">News</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <p>&copy; 2026 Mariam Amr Zekry</p>
+    </footer>
+
+</body>
+
+</html>

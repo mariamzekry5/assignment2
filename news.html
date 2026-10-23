@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | Mariam Amr Zekry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Loaded in the head (not deferred) so the saved theme applies before the page paints -->
+    <script src="script.js"></script>
+    <!-- API widgets (weather, quotes, news) -->
+    <script src="api.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar (shared by every page) -->
+    <nav class="navbar" aria-label="Main">
+        <a href="index.html" class="brand">Mariam Zekry</a>
+
+        <!-- Menu button, only visible on small screens -->
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
+        </button>
+
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="news.html" aria-current="page">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Dark / light mode toggle (Option 3) -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-label">Dark</span>
+        </button>
+    </nav>
+
+    <!-- Page banner -->
+    <header class="page-hero">
+        <div class="page-hero-inner">
+            <h1>News</h1>
+            <p>Live headlines from the worlds of technology, business and science that I follow as an MICT student.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Live headlines (Option 4, Hacker News + Spaceflight News APIs) -->
+        <section id="news-widget" class="card" aria-labelledby="news-heading">
+            <div class="section-header">
+                <h2 id="news-heading">Latest Headlines</h2>
+                <button id="news-refresh" type="button" class="toggle-btn">↻ Refresh</button>
+            </div>
+
+            <div class="news-tabs" role="tablist" aria-label="News category">
+                <button type="button" class="news-tab" role="tab" data-category="technology" aria-controls="news-result">Technology</button>
+                <button type="button" class="news-tab" role="tab" data-category="business" aria-controls="news-result">Startups &amp; Business</button>
+                <button type="button" class="news-tab" role="tab" data-category="space" aria-controls="news-result">Space &amp; Science</button>
+            </div>
+
+            <div id="news-result" class="api-result" role="tabpanel" aria-live="polite"></div>
+
+            <p class="api-source">Data: Hacker News (Algolia API) and the Spaceflight News API</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <nav class="footer-links" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="news.html" aria-current="page">News</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>&copy; 2026 Mariam Amr Zekry</p>
+    </footer>
+
+</body>
+
+</html>

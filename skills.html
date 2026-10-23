@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Mariam Amr Zekry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Loaded in the head (not deferred) so the saved theme applies before the page paints -->
+    <script src="script.js"></script>
+    <!-- API widgets (weather, quotes, news) -->
+    <script src="api.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar (shared by every page) -->
+    <nav class="navbar" aria-label="Main">
+        <a href="index.html" class="brand">Mariam Zekry</a>
+
+        <!-- Menu button, only visible on small screens -->
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
+        </button>
+
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html" aria-current="page">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Dark / light mode toggle (Option 3) -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-label">Dark</span>
+        </button>
+    </nav>
+
+    <!-- Page banner -->
+    <header class="page-hero">
+        <div class="page-hero-inner">
+            <h1>Skills &amp; Experience</h1>
+            <p>The business, technical and personal skills I have built through my studies and activities.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Skills (collapsible, Option 2) -->
+        <section id="skills" class="card">
+            <div class="section-header">
+                <h2>Skills</h2>
+                <button class="toggle-btn" type="button" data-target="skills-content" aria-expanded="true" aria-controls="skills-content">
+                    Hide Skills
+                </button>
+            </div>
+
+            <div id="skills-content" class="collapsible">
+                <div class="skill-groups">
+                    <div class="skill-group">
+                        <h3>Business &amp; Management</h3>
+                        <ul class="chips">
+                            <li>Business Strategy</li>
+                            <li>Project Management</li>
+                            <li>Event &amp; Competition Planning</li>
+                            <li>Inventory Management</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Technical &amp; Data</h3>
+                        <ul class="chips">
+                            <li>Data Analysis</li>
+                            <li>R</li>
+                            <li>SQL / Databases</li>
+                            <li>OutSystems</li>
+                            <li>Shopify &amp; E-commerce</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Personal</h3>
+                        <ul class="chips">
+                            <li>Problem Solving</li>
+                            <li>Critical Thinking</li>
+                            <li>Teamwork &amp; Cross-functional Collaboration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience (collapsible, Option 2) -->
+        <section id="experience" class="card">
+            <div class="section-header">
+                <h2>Experience</h2>
+                <button class="toggle-btn" type="button" data-target="experience-content" aria-expanded="true" aria-controls="experience-content">
+                    Hide Experience
+                </button>
+            </div>
+
+            <div id="experience-content" class="collapsible">
+                <article class="entry">
+                    <div class="entry-head">
+                        <h3>Interdisciplinary Student Competitions &amp; Development Activities</h3>
+                        <span class="entry-date">Organizer</span>
+                    </div>
+                    <ul class="bullets">
+                        <li>Organized and planned interdisciplinary student competitions and development activities.</li>
+                        <li>Designed activities to encourage teamwork, problem-solving, innovation, and practical learning.</li>
+                    </ul>
+                    <ul class="tags">
+                        <li>Event Planning</li>
+                        <li>Project Management</li>
+                        <li>Teamwork</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <nav class="footer-links" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="skills.html" aria-current="page">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>&copy; 2026 Mariam Amr Zekry</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Mariam Amr Zekry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Loaded in the head (not deferred) so the saved theme applies before the page paints -->
+    <script src="script.js"></script>
+    <!-- API widgets (weather, quotes, news) -->
+    <script src="api.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navigation bar (shared by every page) -->
+    <nav class="navbar" aria-label="Main">
+        <a href="index.html" class="brand">Mariam Zekry</a>
+
+        <!-- Menu button, only visible on small screens -->
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
+            <span class="menu-bar" aria-hidden="true"></span>
+        </button>
+
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Dark / light mode toggle (Option 3) -->
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode">
+            <span class="theme-icon" aria-hidden="true">🌙</span>
+            <span class="theme-label">Dark</span>
+        </button>
+    </nav>
+
+    <!-- Page banner -->
+    <header class="page-hero">
+        <div class="page-hero-inner">
+            <h1>Projects</h1>
+            <p>Selected business, data and technology projects from my time at AUC.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Projects (collapsible, Option 2) -->
+        <section id="projects" class="card">
+            <div class="section-header">
+                <h2>Selected Projects</h2>
+                <button class="toggle-btn" type="button" data-target="projects-content" aria-expanded="true" aria-controls="projects-content">
+                    Hide Projects
+                </button>
+            </div>
+
+            <div id="projects-content" class="collapsible">
+                <div class="project-grid">
+
+                    <article class="project">
+                        <h3>Accounting Project with Banque Misr</h3>
+                        <ul class="bullets">
+                            <li>Developed competition concepts as part of an accounting project with Banque Misr.</li>
+                            <li>Involved companies such as Cairoscene and real-estate developers.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Business Strategy</li>
+                            <li>Competition Design</li>
+                        </ul>
+                    </article>
+
+                    <article class="project">
+                        <h3>Production Tracking Application</h3>
+                        <ul class="bullets">
+                            <li>Developed an OutSystems-based application concept for tracking production across different stages.</li>
+                            <li>Focused on identifying bottlenecks in the production process.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>OutSystems</li>
+                            <li>Process Analysis</li>
+                        </ul>
+                    </article>
+
+                    <article class="project">
+                        <h3>Retail Inventory Analysis</h3>
+                        <ul class="bullets">
+                            <li>Used R to analyze retail inventory and sales data.</li>
+                            <li>Developed store-to-store inventory transfer recommendations.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>R</li>
+                            <li>Data Analysis</li>
+                        </ul>
+                    </article>
+
+                    <article class="project">
+                        <h3>E-commerce &amp; Inventory Management</h3>
+                        <ul class="bullets">
+                            <li>Worked with Shopify and inventory data to explore stock management and sales tracking.</li>
+                            <li>Explored promotions and multi-outlet inventory operations.</li>
+                        </ul>
+                        <ul class="tags">
+                            <li>Shopify</li>
+                            <li>Inventory Management</li>
+                        </ul>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <nav class="footer-links" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html" aria-current="page">Projects</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <p>&copy; 2026 Mariam Amr Zekry</p>
+    </footer>
+
+</body>
+
+</html>
